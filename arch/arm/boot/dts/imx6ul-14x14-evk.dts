@@ -145,6 +145,13 @@
 			spi-max-frequency = <100000>;
 		};
 	};
+
+	firmware {
+		optee {
+			compatible = "linaro,optee-tz";
+			method = "smc";
+		};
+	};
 };
 
 &cpu0 {

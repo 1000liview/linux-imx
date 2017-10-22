@@ -239,9 +239,16 @@
 			resets = <&src 4>;
 			bypass_reset = <0>;
 
-			};
 		};
 	};
+
+	firmware {
+		optee {
+			compatible = "linaro,optee-tz";
+			method = "smc";
+		};
+	};
+};
 
 
 &ldb {
