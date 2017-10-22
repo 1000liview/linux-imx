@@ -1024,6 +1024,7 @@
 					 <&clks IMX6QDL_CLK_CAAM_IPG>,
 					 <&clks IMX6QDL_CLK_EIM_SLOW>;
 				clock-names = "mem", "aclk", "ipg", "emi_slow";
+                                status = "disabled";
 
 				sec_jr0: jr0@1000 {
 					compatible = "fsl,sec-v4.0-job-ring";
@@ -1437,5 +1438,10 @@
 				};
 			};
 		};
+	};
+
+	psci {
+		compatible = "arm,psci-0.2";
+		method = "smc";
 	};
 };
